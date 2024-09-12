@@ -1,0 +1,40 @@
+<!-- <app-video-list><app-video-list></app-video-list> -->
+
+<div class="page-title pt-8 pb-4 text-2xl font-bold">Welcome Officer</div>
+
+<div class="section flex gap-6">
+    <div class="section-one w-[45%] h-[92vh] rounded-md flex flex-col gap-6">
+        <div class=" flex flex-col gap-4 h-[50%]">
+            <app-section-title title="Active feeds" count='20'></app-section-title>
+
+            <div class="bg-bgwhite w-full h-full p-2 flex flex-col gap-2 rounded-md overflow-y-auto custom-scrollbar">
+            <app-video-list></app-video-list>
+            <app-video-list></app-video-list>
+            <app-video-list></app-video-list>
+            <app-video-list></app-video-list>
+            </div>
+        </div>
+
+        <div class=" flex flex-col gap-4 h-[50%]">
+            <app-section-title title="Active feeds" count='20'></app-section-title>
+
+            <div class="bg-bgwhite w-full h-full p-2 flex flex-col gap-2 rounded-md overflow-y-auto custom-scrollbar">
+            <app-video-list></app-video-list>
+            <app-video-list></app-video-list>
+            <app-video-list></app-video-list>
+            <app-video-list></app-video-list>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="section-two  w-[55%] h-[92vh] rounded-md flex flex-col gap-4">
+        <app-section-title title="Alerts" count='13'></app-section-title>
+
+        <div class="bg-bgwhite w-full h-full flex flex-col gap-2 p-4 rounded-md overflow-y-auto custom-scrollbar" >
+            <div class="" *ngFor="let row of alertData">
+                <app-alert-list videoTitle={{row.video_title}} alertDetail={{row.alert_detail}} (viewClick)="viewAlert()"></app-alert-list>
+            </div>
+        </div>
+    </div>
+</div>
