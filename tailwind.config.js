@@ -11,6 +11,8 @@ module.exports = {
         secondarytext: '#F56630',
         bggrey: '#F0F0F0',
         bgwhite: '#FFFFFF',
+        dangerbg: '#FBEAE9',
+        dangertext: '#CB1A14'
       }
     },
   },

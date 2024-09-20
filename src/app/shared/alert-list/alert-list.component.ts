@@ -9,6 +9,7 @@ export class AlertListComponent {
 
   @Input() videoTitle!: string;
   @Input() alertDetail!: string;
+  @Input() isVideoName!: boolean;
 
   @Output() viewClick = new EventEmitter();
 

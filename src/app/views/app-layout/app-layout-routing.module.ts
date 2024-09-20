@@ -6,6 +6,8 @@ import { LiveVideoMonitoringComponent } from './live-video-monitoring/live-video
 import { ManageVideosComponent } from './manage-videos/manage-videos.component';
 import { AnalyseVideoComponent } from './analyse-video/analyse-video.component';
 import { ManageDatabaseComponent } from './manage-database/manage-database.component';
+import { VideoReportComponent } from './video-report/video-report.component';
+import { AnalyseComponent } from './analyse/analyse.component';
 
 const routes: Routes = [
   {
@@ -15,8 +17,10 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'live-video-monitoring', component: LiveVideoMonitoringComponent},
       {path: 'manage-videos', component: ManageVideosComponent},
+      {path: 'video-report', component: VideoReportComponent},
       {path: 'manage-database', component: ManageDatabaseComponent},
-      {path: 'analyse-video', component: AnalyseVideoComponent}
+      {path: 'analyse-video', component: AnalyseVideoComponent},
+      {path: 'analyse', component: AnalyseComponent}
     ]
   }
 ];

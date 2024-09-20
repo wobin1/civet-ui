@@ -1,1 +1,14 @@
-<p>manage-videos works!</p>
+<div class="section">
+    <div class="videos">
+        <div class="header pt-8">
+            <app-search-upload-header></app-search-upload-header>
+
+        <div class="flex flex-wrap  gap-4 mt-4">
+            <ng-container class="w-[300px]" *ngFor="let row of videos">
+              <span routerLink="/app/video-report"  >
+                <app-video-card [videoTitle]=row.video_title [dateCreated]=row.date_created></app-video-card>
+              </span>
+            </ng-container>
+          </div>
+    </div>
+</div>

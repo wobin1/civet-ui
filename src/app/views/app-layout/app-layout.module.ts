@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +10,9 @@ import { LiveVideoMonitoringComponent } from './live-video-monitoring/live-video
 import { ManageVideosComponent } from './manage-videos/manage-videos.component';
 import { ManageDatabaseComponent } from './manage-database/manage-database.component';
 import { AnalyseVideoComponent } from './analyse-video/analyse-video.component';
+import { VideoReportComponent } from './video-report/video-report.component';
+import { AnalyseComponent } from './analyse/analyse.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,12 +22,16 @@ import { AnalyseVideoComponent } from './analyse-video/analyse-video.component';
     LiveVideoMonitoringComponent,
     ManageVideosComponent,
     ManageDatabaseComponent,
-    AnalyseVideoComponent
+    AnalyseVideoComponent,
+    VideoReportComponent,
+    AnalyseComponent
   ],
   imports: [
     CommonModule,
     AppLayoutRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class AppLayoutModule { }
