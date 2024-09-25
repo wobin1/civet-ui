@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-app-layout',
@@ -9,12 +10,16 @@ export class AppLayoutComponent {
   signout:boolean = false;
   loading:boolean = false;
 
-  constructor(){}
+  constructor(private router: Router){}
 
   ngOnInit(){}
 
-  signOut(){
+  toggleSignout(){
     this.signout = !this.signout;
+  }
+
+  signOut(){
+    this.router.navigateByUrl('auth/login')
   }
 
 }
