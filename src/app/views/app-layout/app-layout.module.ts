@@ -13,6 +13,7 @@ import { AnalyseVideoComponent } from './analyse-video/analyse-video.component';
 import { VideoReportComponent } from './video-report/video-report.component';
 import { AnalyseComponent } from './analyse/analyse.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UploadVideoComponent } from './analyse-video/upload-video/upload-video.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ManageDatabaseComponent,
     AnalyseVideoComponent,
     VideoReportComponent,
-    AnalyseComponent
+    AnalyseComponent,
+    UploadVideoComponent
   ],
   imports: [
     CommonModule,

@@ -44,7 +44,7 @@ export class LiveVideoMonitoringComponent {
         this.mediaRecorder = new MediaRecorder(stream, { mimeType: 'video/webm; codecs=vp9' });
         this.mediaRecorder.ondataavailable = event => this.sendChunk(event.data);
         this.mediaRecorder.start(100); // Send data every 100ms
-        this.socket = new WebSocket('ws://_WEBSOCKET_URL');
+        this.socket = new WebSocket('ws://20.248.119.161:8003/ws/video-stream');
       })
       .catch(error => console.error('Error accessing media devices.', error));
   }

@@ -8,6 +8,8 @@ import { SharedModule } from '../../shared/shared.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PrimengModule } from '../../primeng/primeng.module';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
   imports: [
     CommonModule,
     AuthLayoutRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    PrimengModule
   ]
 })
 export class AuthLayoutModule { }

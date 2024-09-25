@@ -9,42 +9,36 @@ import { HttpServiceService } from '../../../services/http-service.service';
 })
 export class AnalyseVideoComponent {
 
-  files: File[] = [];
-  selectedFile: File| null = null;
-  videoForm!: FormGroup
-  uploadProgress: number = 0;
+  data = true;
+  uploadVideo: boolean = false;
+  alertData = [
+    {"video_title": "Video One", "alert_detail": "Firearm detected"},
+    {"video_title": "Video Two", "alert_detail": "Person down"},
+    {"video_title": "Video Three", "alert_detail": "Suspicious package"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"},
+    {"video_title": "Video Four", "alert_detail": "Unidentified object in the sky"}
+  ]
 
-  constructor(
-    private fb: FormBuilder,
-    private api: HttpServiceService
-  ){}
+  videos = []
+  viewAlert(){
 
-
-  ngOnInit(){
-    this.videoForm = this.fb.group({
-      videoFile: ['']
-    });
   }
 
-  onFileSelected(event:any){
-    const file: File = event.target.files[0];
-    if (file) {
-      this.selectedFile = file;
-      console.log(this.selectedFile)
-    }
-  }
-
-
-
-   // Submit form to upload file
-   onSubmit() {
-    if (!this.selectedFile) return;
-
-    const formData = new FormData();
-    formData.set('file', this.selectedFile);
-
-    this.api.post('', this.files)
-
+  toggleUploadVideo(){
+    this.uploadVideo = !this.uploadVideo;
   }
 
 

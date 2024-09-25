@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
 
-
-const primeNG: Array<String> = []
+const primeNG: any = [
+  ButtonModule,
+]
 
 
 @NgModule({
